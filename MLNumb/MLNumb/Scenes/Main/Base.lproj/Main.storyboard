@@ -17,18 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8tK-ba-yRn">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="E4v-Ns-tEo">
+                                <rect key="frame" x="160.5" y="288.5" width="54" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-0j-GyL">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="30"/>
+                                        <state key="normal" title="Camera"/>
+                                        <connections>
+                                            <action selector="cameraButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YGD-VX-WRl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seb-1O-AON">
+                                        <rect key="frame" x="0.0" y="60" width="54" height="30"/>
+                                        <state key="normal" title="Gallery"/>
+                                        <connections>
+                                            <action selector="galleryButtonTouced:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZm-3f-tLz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E4v-Ns-tEo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jVc-V9-YA8"/>
+                            <constraint firstItem="E4v-Ns-tEo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pmc-2c-SGa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="L8g-F0-h6u"/>
-                    <connections>
-                        <outlet property="imageView" destination="8tK-ba-yRn" id="R3C-ig-l0x"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

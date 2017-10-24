@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13011A321F9F16EE008FB118 /* imageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A2C1F9F16EE008FB118 /* imageInteractor.swift */; };
+		13011A341F9F16EE008FB118 /* imagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A2E1F9F16EE008FB118 /* imagePresenter.swift */; };
+		13011A361F9F16EE008FB118 /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A301F9F16EE008FB118 /* imageViewController.swift */; };
+		13011A391F9F1776008FB118 /* image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13011A381F9F1776008FB118 /* image.storyboard */; };
+		13011A3B1F9F19DD008FB118 /* UIImage+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A3A1F9F19DD008FB118 /* UIImage+Converter.swift */; };
+		13011A3F1F9F3615008FB118 /* ImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A3E1F9F3615008FB118 /* ImageRouter.swift */; };
+		13011A411F9F3A55008FB118 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A401F9F3A55008FB118 /* MainRouter.swift */; };
 		133B2BD91F9E1E2B000BA897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BD81F9E1E2B000BA897 /* AppDelegate.swift */; };
 		133B2BDE1F9E1E2B000BA897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133B2BDC1F9E1E2B000BA897 /* Main.storyboard */; };
 		133B2BE01F9E1E2B000BA897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133B2BDF1F9E1E2B000BA897 /* Assets.xcassets */; };
 		133B2BE31F9E1E2B000BA897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133B2BE11F9E1E2B000BA897 /* LaunchScreen.storyboard */; };
-		133B2BEB1F9E1F83000BA897 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BEA1F9E1F7D000BA897 /* SqueezeNet.mlmodel */; };
 		133B2BF41F9E1FDE000BA897 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BEE1F9E1FDE000BA897 /* MainInteractor.swift */; };
 		133B2BF61F9E1FDE000BA897 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BF01F9E1FDE000BA897 /* MainPresenter.swift */; };
 		133B2BF81F9E1FDE000BA897 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BF21F9E1FDE000BA897 /* MainViewController.swift */; };
@@ -19,13 +25,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13011A2C1F9F16EE008FB118 /* imageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageInteractor.swift; sourceTree = "<group>"; };
+		13011A2E1F9F16EE008FB118 /* imagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePresenter.swift; sourceTree = "<group>"; };
+		13011A301F9F16EE008FB118 /* imageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
+		13011A381F9F1776008FB118 /* image.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = image.storyboard; sourceTree = "<group>"; };
+		13011A3A1F9F19DD008FB118 /* UIImage+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Converter.swift"; sourceTree = "<group>"; };
+		13011A3E1F9F3615008FB118 /* ImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRouter.swift; sourceTree = "<group>"; };
+		13011A401F9F3A55008FB118 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		133B2BD51F9E1E2B000BA897 /* MLNumb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLNumb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133B2BD81F9E1E2B000BA897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		133B2BDD1F9E1E2B000BA897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		133B2BDF1F9E1E2B000BA897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		133B2BE21F9E1E2B000BA897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		133B2BE41F9E1E2B000BA897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		133B2BEA1F9E1F7D000BA897 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		133B2BEE1F9E1FDE000BA897 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		133B2BF01F9E1FDE000BA897 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		133B2BF21F9E1FDE000BA897 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +55,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13011A2A1F9F16A6008FB118 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				13011A3E1F9F3615008FB118 /* ImageRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		13011A2B1F9F16CE008FB118 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				13011A2C1F9F16EE008FB118 /* imageInteractor.swift */,
+				13011A2E1F9F16EE008FB118 /* imagePresenter.swift */,
+				13011A301F9F16EE008FB118 /* imageViewController.swift */,
+				13011A381F9F1776008FB118 /* image.storyboard */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		13011A3C1F9F19E7008FB118 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				13011A3A1F9F19DD008FB118 /* UIImage+Converter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		13011A3D1F9F1A29008FB118 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				133B2BE11F9E1E2B000BA897 /* LaunchScreen.storyboard */,
+				133B2BD81F9E1E2B000BA897 /* AppDelegate.swift */,
+				133B2BDF1F9E1E2B000BA897 /* Assets.xcassets */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		133B2BCC1F9E1E2B000BA897 = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				133B2BE41F9E1E2B000BA897 /* Info.plist */,
-				133B2BD81F9E1E2B000BA897 /* AppDelegate.swift */,
-				133B2BDF1F9E1E2B000BA897 /* Assets.xcassets */,
-				133B2BE11F9E1E2B000BA897 /* LaunchScreen.storyboard */,
+				13011A3D1F9F1A29008FB118 /* SupportFiles */,
+				13011A3C1F9F19E7008FB118 /* Extensions */,
 				133B2BED1F9E1FAC000BA897 /* MLModel */,
 				133B2BFA1F9E1FF4000BA897 /* Scenes */,
 			);
@@ -79,6 +127,7 @@
 				133B2BEE1F9E1FDE000BA897 /* MainInteractor.swift */,
 				133B2BF01F9E1FDE000BA897 /* MainPresenter.swift */,
 				133B2BF21F9E1FDE000BA897 /* MainViewController.swift */,
+				13011A401F9F3A55008FB118 /* MainRouter.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -86,7 +135,6 @@
 		133B2BED1F9E1FAC000BA897 /* MLModel */ = {
 			isa = PBXGroup;
 			children = (
-				133B2BEA1F9E1F7D000BA897 /* SqueezeNet.mlmodel */,
 				133B2BFB1F9E265B000BA897 /* Resnet50.mlmodel */,
 			);
 			path = MLModel;
@@ -95,6 +143,8 @@
 		133B2BFA1F9E1FF4000BA897 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				13011A2B1F9F16CE008FB118 /* Image */,
+				13011A2A1F9F16A6008FB118 /* Router */,
 				133B2BEC1F9E1F9F000BA897 /* Main */,
 			);
 			path = Scenes;
@@ -126,6 +176,9 @@
 		133B2BCD1F9E1E2B000BA897 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Achmad Jeihan Pahlevi";
@@ -161,6 +214,7 @@
 			files = (
 				133B2BE31F9E1E2B000BA897 /* LaunchScreen.storyboard in Resources */,
 				133B2BE01F9E1E2B000BA897 /* Assets.xcassets in Resources */,
+				13011A391F9F1776008FB118 /* image.storyboard in Resources */,
 				133B2BDE1F9E1E2B000BA897 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,11 +226,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13011A3B1F9F19DD008FB118 /* UIImage+Converter.swift in Sources */,
+				13011A321F9F16EE008FB118 /* imageInteractor.swift in Sources */,
+				13011A341F9F16EE008FB118 /* imagePresenter.swift in Sources */,
 				133B2BF81F9E1FDE000BA897 /* MainViewController.swift in Sources */,
 				133B2BF61F9E1FDE000BA897 /* MainPresenter.swift in Sources */,
-				133B2BEB1F9E1F83000BA897 /* SqueezeNet.mlmodel in Sources */,
+				13011A3F1F9F3615008FB118 /* ImageRouter.swift in Sources */,
 				133B2BD91F9E1E2B000BA897 /* AppDelegate.swift in Sources */,
 				133B2BFC1F9E2667000BA897 /* Resnet50.mlmodel in Sources */,
+				13011A361F9F16EE008FB118 /* imageViewController.swift in Sources */,
+				13011A411F9F3A55008FB118 /* MainRouter.swift in Sources */,
 				133B2BF41F9E1FDE000BA897 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

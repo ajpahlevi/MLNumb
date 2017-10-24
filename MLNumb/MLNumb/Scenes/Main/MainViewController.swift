@@ -18,11 +18,9 @@ protocol MainDisplayLogic: class {
 
 class MainViewController: UIViewController, MainDisplayLogic {
     var interactor: MainBusinessLogic?
+    var router: MainRouter!
     
     let imagePicker = UIImagePickerController()
-    let model = Resnet50()
-    
-    @IBOutlet weak var imageView: UIImageView!
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -41,6 +39,7 @@ class MainViewController: UIViewController, MainDisplayLogic {
         let viewController = self
         let interactor = MainInteractor()
         let presenter = MainPresenter()
+        router = MainRouter()
         viewController.interactor = interactor
         interactor.presenter = presenter
         presenter.viewController = viewController
@@ -49,80 +48,29 @@ class MainViewController: UIViewController, MainDisplayLogic {
     override func viewDidLoad() {
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
+    }
+    
+    @IBAction func cameraButtonTouched(_ sender: UIButton) {
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func galleryButtonTouced(_ sender: UIButton) {
         imagePicker.sourceType = .photoLibrary
         
         present(imagePicker, animated: true, completion: nil)
     }
+    
 }
 
 extension MainViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.contentMode = .scaleAspectFit
-            imageView.image = pickedImage
-            
-            if let pixelBuffer = pickedImage.resize(to: CGSize(width: 224, height: 224)).pixelBuffer() {
-                if let result = try? model.prediction(image: pixelBuffer) {
-                    print("RESULT = " + result.classLabel)
-                }
-            }
+            router.navigateToImage(withImage: pickedImage, fromNavigation: self.navigationController!)
         }
         
         dismiss(animated: true, completion: nil)
-    }
-}
-
-extension UIImage {
-    
-    func resize(to newSize: CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: newSize.width, height: newSize.height), true, 1.0)
-        self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return resizedImage
-    }
-    
-    func pixelBuffer() -> CVPixelBuffer? {
-        let width = self.size.width
-        let height = self.size.height
-        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue,
-                     kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
-        var pixelBuffer: CVPixelBuffer?
-        let status = CVPixelBufferCreate(kCFAllocatorDefault,
-                                         Int(width),
-                                         Int(height),
-                                         kCVPixelFormatType_32ARGB,
-                                         attrs,
-                                         &pixelBuffer)
-        
-        guard let resultPixelBuffer = pixelBuffer, status == kCVReturnSuccess else {
-            return nil
-        }
-        
-        CVPixelBufferLockBaseAddress(resultPixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
-        let pixelData = CVPixelBufferGetBaseAddress(resultPixelBuffer)
-        
-        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
-        guard let context = CGContext(data: pixelData,
-                                      width: Int(width),
-                                      height: Int(height),
-                                      bitsPerComponent: 8,
-                                      bytesPerRow: CVPixelBufferGetBytesPerRow(resultPixelBuffer),
-                                      space: rgbColorSpace,
-                                      bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue) else {
-                                        return nil
-        }
-        
-        context.translateBy(x: 0, y: height)
-        context.scaleBy(x: 1.0, y: -1.0)
-        
-        UIGraphicsPushContext(context)
-        self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-        UIGraphicsPopContext()
-        CVPixelBufferUnlockBaseAddress(resultPixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
-        
-        return resultPixelBuffer
     }
 }
 
