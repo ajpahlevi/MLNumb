@@ -22,7 +22,7 @@ class imageInteractor: imageBusinessLogic {
     let model = SqueezeNet()
     
     func predict(_ image: UIImage) {
-        if let pixelBuffer = image.resize(to: CGSize(width: 224, height: 224)).pixelBuffer() {
+        if let pixelBuffer = image.resize(to: CGSize(width: 227, height: 227)).pixelBuffer() {
             if let result = try? model.prediction(image: pixelBuffer) {
                 presenter?.present(image, withPrediction: result.classLabel)
             }
