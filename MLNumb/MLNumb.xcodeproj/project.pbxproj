@@ -14,6 +14,7 @@
 		13011A3B1F9F19DD008FB118 /* UIImage+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A3A1F9F19DD008FB118 /* UIImage+Converter.swift */; };
 		13011A3F1F9F3615008FB118 /* ImageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A3E1F9F3615008FB118 /* ImageRouter.swift */; };
 		13011A411F9F3A55008FB118 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13011A401F9F3A55008FB118 /* MainRouter.swift */; };
+		13011A431F9F4432008FB118 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 13011A421F9F442F008FB118 /* SqueezeNet.mlmodel */; };
 		133B2BD91F9E1E2B000BA897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BD81F9E1E2B000BA897 /* AppDelegate.swift */; };
 		133B2BDE1F9E1E2B000BA897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133B2BDC1F9E1E2B000BA897 /* Main.storyboard */; };
 		133B2BE01F9E1E2B000BA897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133B2BDF1F9E1E2B000BA897 /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		133B2BF41F9E1FDE000BA897 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BEE1F9E1FDE000BA897 /* MainInteractor.swift */; };
 		133B2BF61F9E1FDE000BA897 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BF01F9E1FDE000BA897 /* MainPresenter.swift */; };
 		133B2BF81F9E1FDE000BA897 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BF21F9E1FDE000BA897 /* MainViewController.swift */; };
-		133B2BFC1F9E2667000BA897 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 133B2BFB1F9E265B000BA897 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +32,7 @@
 		13011A3A1F9F19DD008FB118 /* UIImage+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Converter.swift"; sourceTree = "<group>"; };
 		13011A3E1F9F3615008FB118 /* ImageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRouter.swift; sourceTree = "<group>"; };
 		13011A401F9F3A55008FB118 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		13011A421F9F442F008FB118 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		133B2BD51F9E1E2B000BA897 /* MLNumb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLNumb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133B2BD81F9E1E2B000BA897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		133B2BDD1F9E1E2B000BA897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		133B2BEE1F9E1FDE000BA897 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		133B2BF01F9E1FDE000BA897 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		133B2BF21F9E1FDE000BA897 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		133B2BFB1F9E265B000BA897 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 		133B2BED1F9E1FAC000BA897 /* MLModel */ = {
 			isa = PBXGroup;
 			children = (
-				133B2BFB1F9E265B000BA897 /* Resnet50.mlmodel */,
+				13011A421F9F442F008FB118 /* SqueezeNet.mlmodel */,
 			);
 			path = MLModel;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 				133B2BF61F9E1FDE000BA897 /* MainPresenter.swift in Sources */,
 				13011A3F1F9F3615008FB118 /* ImageRouter.swift in Sources */,
 				133B2BD91F9E1E2B000BA897 /* AppDelegate.swift in Sources */,
-				133B2BFC1F9E2667000BA897 /* Resnet50.mlmodel in Sources */,
+				13011A431F9F4432008FB118 /* SqueezeNet.mlmodel in Sources */,
 				13011A361F9F16EE008FB118 /* imageViewController.swift in Sources */,
 				13011A411F9F3A55008FB118 /* MainRouter.swift in Sources */,
 				133B2BF41F9E1FDE000BA897 /* MainInteractor.swift in Sources */,

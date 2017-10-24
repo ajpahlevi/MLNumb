@@ -19,7 +19,7 @@ protocol imageBusinessLogic {
 class imageInteractor: imageBusinessLogic {
     var presenter: imagePresentationLogic?
     
-    let model = Resnet50()
+    let model = SqueezeNet()
     
     func predict(_ image: UIImage) {
         if let pixelBuffer = image.resize(to: CGSize(width: 224, height: 224)).pixelBuffer() {
